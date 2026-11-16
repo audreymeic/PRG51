@@ -1,0 +1,53 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int choice;
+    string Item_name;
+    int Price = 0, Quantity = 0;
+    int found = 0;
+
+    do {
+
+        cout << "\n===== INVENTORY MENU =====\n";
+        cout << "1. Add Item\n";
+        cout << "2. View Item\n";
+        cout << "3. Remove Item\n";
+        cout << "4. Search Item\n";
+        cout << "5. Exit\n";
+
+        cout << "\nENTER CHOICE: ";
+        cin >> choice;
+
+        switch (choice) {
+
+          
+            case 1: {
+                if (found == 0) {
+                    cout << "\nEnter Item Name: ";
+                    cin >> Item_name;
+
+                    cout << "Enter Quantity: ";
+                    cin >> Quantity;
+
+                    cout << "Enter Price: ";
+                    cin >> Price;
+
+                    found = 1;
+
+                    cout << "\nItem added successfully!";
+                }
+                else {
+                    cout << "\nAn item already exists!";
+                }
+
+                break;
+            }
+
+        }
+
+    } while (choice != 5);
+
+    return 0;
+}
